@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# Inherit some common CM stuff.
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+
 # The gps config appropriate for this device
 PRODUCT_COPY_FILES += \
     device/htc/mecha/gps.conf:system/etc/gps.conf
