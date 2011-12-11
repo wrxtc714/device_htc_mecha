@@ -25,6 +25,8 @@
 # against the traditional rules of inheritance).
 USE_CAMERA_STUB := true
 
+BOARD_USE_LEGACY_TOUCHSCREEN := true
+
 # inherit from common msm7x30 device
 -include device/htc/msm7x30-common/BoardConfigCommon.mk
 
@@ -49,6 +51,9 @@ BOARD_OVERLAY_MINIFICATION_LIMIT := 2
 # GPS Defines
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := mecha
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
+
+BOARD_EGL_GRALLOC_USAGE_FILTER := true
+COMMON_GLOBAL_CFLAGS += -DMISSING_EGL_EXTERNAL_IMAGE -DMISSING_GRALLOC_BUFFERS -DMISSING_EGL_PIXEL_FORMAT_YV12
 
 # cat /proc/emmc
 # dev:        size     erasesize name
@@ -76,7 +81,6 @@ BOARD_PAGE_SIZE := 4096
 
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_SELECT_BUTTON := true
-BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/htc/mecha/recovery_ui.c
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
 BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
