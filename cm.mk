@@ -105,7 +105,12 @@ PRODUCT_COPY_FILES += \
     device/htc/mecha/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
     device/htc/mecha/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
     device/htc/mecha/keylayout/mecha-keypad-v0.kl:system/usr/keylayout/mecha-keypad-v0.kl \
-    device/htc/mecha/keylayout/mecha-keypad.kl:system/usr/keylayout/mecha-keypad.kl
+    device/htc/mecha/keylayout/mecha-keypad.kl:system/usr/keylayout/mecha-keypad.kl \
+    device/htc/mecha/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl
+
+# Touchscreen
+PRODUCT_COPY_FILES +=\
+    device/htc/mecha/idc/atmel-touchscreen.idc:system/usr/idc/atmel-touchscreen.idc
 
 # Firmware
 PRODUCT_COPY_FILES += \
