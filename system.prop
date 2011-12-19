@@ -2,9 +2,12 @@
 # system.prop for mecha
 #
 
+# Disable HW accel for now
+#ro.config.disable_hw_accel=true
+
 ro.sf.lcd_density=240
 
-debug.fb.rgb565 = 0
+debug.fb.rgb565=0
 
 #+from QCT Fusion
 rild.libpath=/system/lib/libril-qc-1.so
